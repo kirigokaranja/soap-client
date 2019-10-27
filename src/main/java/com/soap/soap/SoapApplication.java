@@ -45,12 +45,12 @@ public class SoapApplication {
             GetAllUniversitiesResponse response2 = client.getAllUniversitiesResponse();
             ArrayList<University> alluniversities = (ArrayList<University>) response2.getUniversity();
             System.out.println("\n All Universities \n");
-            for (int i=0; i<alluniversities.size(); i++){
+            for (University alluniversity : alluniversities) {
                 System.out.println(
-                                "University Name: " + alluniversities.get(i).getName() +
-                                "\n University Location: " + alluniversities.get(i).getLocation() +
-                                "\n University Year Founded: " + alluniversities.get(i).getYearFounded()
-                        );
+                        "University Name: " + alluniversity.getName() +
+                                "\n University Location: " + alluniversity.getLocation() +
+                                "\n University Year Founded: " + alluniversity.getYearFounded()
+                );
             }
         };
     }
